@@ -1,14 +1,14 @@
-import React from "react";
-import Navbar from "emerald-ui/lib/Navbar";
-import Nav from "emerald-ui/lib/Nav";
-import DropdownButton from "emerald-ui/lib/DropdownButton";
-import DropdownItem from "emerald-ui/lib/DropdownItem";
-import Icon from "emerald-ui/lib/Icon";
-import Avatar from "emerald-ui/lib/Avatar";
+import React from 'react';
+import Navbar from 'emerald-ui/lib/Navbar';
+import Nav from 'emerald-ui/lib/Nav';
+import DropdownButton from 'emerald-ui/lib/DropdownButton';
+import DropdownItem from 'emerald-ui/lib/DropdownItem';
+import Icon from 'emerald-ui/lib/Icon';
+import Avatar from 'emerald-ui/lib/Avatar';
 
 export const Header = () => {
   return (
-    <Navbar breakAt="lg">
+    <Navbar breakAt="lg" fixedAtTop>
       <Navbar.Brand>
         <h2>News</h2>
       </Navbar.Brand>
