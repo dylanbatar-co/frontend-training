@@ -1,0 +1,29 @@
+.alert {
+  min-height: 45px;
+  display: flex;
+
+  .alert-message-container {
+    justify-content: space-between;
+
+    button {
+      align-items: center;
+      background-color: #282e2e;
+      border: none !important;
+      border-radius: 50%;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      opacity: 80%;
+      margin: 0;
+      padding: 0;
+
+      i {
+        margin: 0;
+      }
+    }
+  }
+
+  .eui-alert-default-icon {
+    display: none;
+  }
+}

@@ -1,0 +1,15 @@
+$units: (1, 2, 5, 8, 10, 15, 20);
+$sides: (top, bottom, left, right);
+
+// create margins and padding
+@each $unit in $units {
+  @each $side in $sides {
+    .m#{str-slice($side, 0, 1)}-#{$unit} {
+      margin-#{$side}: #{$unit}rem !important;
+    }
+
+    .p#{str-slice($side, 0, 1)}-#{$unit} {
+      padding-#{$side}: #{$unit}rem !important;
+    }
+  }
+}
