@@ -5,7 +5,7 @@ export const Alert = () => {
   const [show, setShow] = useState(true);
 
   return (
-    <>
+    <div className="container">
       {show && (
         <AlertE className="alert" dismissible onDismiss={() => setShow(false)}>
           <div className="alert-message-container">
@@ -14,6 +14,6 @@ export const Alert = () => {
           </div>
         </AlertE>
       )}
-    </>
+    </div>
   );
 };

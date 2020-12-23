@@ -1,0 +1,10 @@
+.banner {
+  display: flex;
+  justify-content: center;
+  max-width: 1440px;
+  margin: 0 auto;
+  .banner-image {
+    max-height: 576px;
+    width: 100%;
+  }
+}

@@ -7,7 +7,7 @@ export const NewsApp = () => {
   return (
     <>
       <Header />
-      <main className="mt-8">
+      <main className="mt-8 mb-8">
         <Alert />
         <News />
         <Banner />

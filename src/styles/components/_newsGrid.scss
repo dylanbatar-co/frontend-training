@@ -1,0 +1,12 @@
+.news-grid {
+  .eui-card-flex-container {
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.04);
+    background-color: #ffffff;
+  }
+  .eui-card {
+    box-shadow: none;
+    img {
+      height: 150px;
+    }
+  }
+}
