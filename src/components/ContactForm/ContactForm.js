@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 import Card from 'emerald-ui/lib/Card';
 import Checkbox from 'emerald-ui/lib/Checkbox';
 import Button from 'emerald-ui/lib/Button';
@@ -9,12 +10,18 @@ import Col from 'emerald-ui/lib/Row';
 
 import { useForm } from '../../hooks/useForm';
 import { Input } from '../Input/Input';
+import { Modal } from '../Modal/Modal';
+
+import {
+  emailValidation,
+  fieldRequired,
+  phoneValidation
+} from '../../utils/validations';
 
 export const ContactForm = () => {
   const [
     { email, firstName, lastName, message, phone },
-    handleInputChange,
-    reset
+    handleInputChange
   ] = useForm({
     email: '',
     firstName: '',
@@ -23,9 +30,12 @@ export const ContactForm = () => {
     phone: ''
   });
 
+  const [showModal, setShowModal] = useState(false);
+
   const handlerSubmit = event => {
     event.preventDefault();
-    reset();
+
+    setShowModal(true);
   };
 
   return (
@@ -38,26 +48,32 @@ export const ContactForm = () => {
               onChange={handleInputChange}
               label="First name"
               name="firstName"
+              validator={fieldRequired}
             />
             <Input
               value={lastName}
               onChange={handleInputChange}
               label="Last name"
               name="lastName"
+              validator={fieldRequired}
             />
           </Row>
           <Row>
             <Input
               value={email}
               onChange={handleInputChange}
+              type="email"
               label="Email"
               name="email"
+              validator={emailValidation}
             />
             <Input
               value={phone}
               onChange={handleInputChange}
               label="Phone number"
               name="phone"
+              type="phone"
+              validator={phoneValidation}
             />
           </Row>
           <Row>
@@ -67,6 +83,7 @@ export const ContactForm = () => {
               name="message"
               label="Message"
               textarea
+              validator={fieldRequired}
             />
           </Row>
           <Checkbox
@@ -80,6 +97,13 @@ export const ContactForm = () => {
           </Col>
         </Container>
       </Card>
+      <>
+        <Modal
+          showProp={showModal}
+          toggleModalProp={setShowModal}
+          data={{ email, firstName, lastName, message, phone }}
+        />
+      </>
     </form>
   );
 };

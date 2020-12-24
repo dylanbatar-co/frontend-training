@@ -17,15 +17,15 @@ export const Header = () => {
   return (
     <Navbar breakAt="lg" fixedAtTop>
       <Navbar.Brand>
-        <h2>News</h2>
+        <img src={`${process.env.PUBLIC_URL}/assets/img/logo.svg`} alt="logo" />
       </Navbar.Brand>
       <Nav grow collapsible>
-        <RenderDropdownList listItem={dropdownItems} titleList="section" />
+        <RenderDropdownList listItem={dropdownItems} titleList="Section" />
         <a href="#editorial">Editorial</a>
         <a href="#contactus">Contact Us</a>
       </Nav>
       <Nav>
-        <a href="#foo">
+        <a href="#avatar">
           <Avatar title="JS" />
         </a>
       </Nav>
