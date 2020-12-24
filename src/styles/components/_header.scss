@@ -1,4 +1,5 @@
 .eui-navbar-bar {
   max-width: $max-width;
   margin: 0 auto;
+  @include text-important;
 }

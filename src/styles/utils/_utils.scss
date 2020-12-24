@@ -1,4 +1,4 @@
-$units: (0, 1, 2, 5, 8, 10, 15, 20);
+$units: (0, 1, 2, 4, 5, 8, 10, 15, 20);
 $sides: (top, bottom, left, right);
 
 // create margins and padding
@@ -12,19 +12,4 @@ $sides: (top, bottom, left, right);
       padding-#{$side}: #{$unit}rem !important;
     }
   }
-}
-
-.container {
-  max-width: 940px;
-  margin: 0 auto;
-}
-
-.container-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.text-center {
-  text-align: center;
 }

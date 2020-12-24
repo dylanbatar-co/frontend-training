@@ -38,7 +38,7 @@ export const NewsGrid = () => {
           !error &&
           data.response.docs
             .slice(0, limitPost)
-            .map((item, idx) => <CardNews key={item._id} {...item} />)}
+            .map(item => <CardNews key={item._id} {...item} />)}
       </CardGrid>
       <div className="container-button mt-5">
         <Button

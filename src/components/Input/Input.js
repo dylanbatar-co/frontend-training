@@ -15,7 +15,12 @@ export const Input = ({
   const [error, setError] = useState('');
 
   return (
-    <Col xs={12} lg={textarea ? 12 : 6} md={textarea ? 12 : 6}>
+    <Col
+      xs={12}
+      lg={textarea ? 12 : 6}
+      md={textarea ? 12 : 6}
+      className="input-wrapper"
+    >
       <label htmlFor={`${name}`}>{label}</label>
       <TextField
         id={`${name}`}

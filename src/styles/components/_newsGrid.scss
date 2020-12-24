@@ -10,7 +10,12 @@
       height: 150px;
     }
 
+    h2 {
+      @include text-important;
+    }
+
     p {
+      @include text-medium;
       max-width: 400px;
       height: 136px;
       overflow: hidden;

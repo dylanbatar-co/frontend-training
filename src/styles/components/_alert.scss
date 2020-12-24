@@ -4,6 +4,7 @@
 
   .alert-message-container {
     justify-content: space-between;
+    @include text-normal;
 
     button {
       align-items: center;
