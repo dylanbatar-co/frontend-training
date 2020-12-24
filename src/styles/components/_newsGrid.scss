@@ -5,8 +5,16 @@
   }
   .eui-card {
     box-shadow: none;
+
     img {
       height: 150px;
+    }
+
+    p {
+      max-width: 400px;
+      height: 132px;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
   }
 }

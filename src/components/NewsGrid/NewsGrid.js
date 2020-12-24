@@ -22,7 +22,7 @@ export const NewsGrid = () => {
   );
 
   const disableButton = () => {
-    if (limitPost === data?.articles.length) return true;
+    if (limitPost === data?.data.length) return true;
     return false;
   };
 
@@ -36,9 +36,9 @@ export const NewsGrid = () => {
         {conditionalRender()}
         {!loading &&
           !error &&
-          data.articles
+          data.data
             .slice(0, limitPost)
-            .map(item => <CardNews key={item.publishedAt} {...item} />)}
+            .map((item, idx) => <CardNews key={idx} {...item} />)}
       </CardGrid>
       <div className="container-button mt-5">
         <Button
