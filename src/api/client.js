@@ -1,5 +1,5 @@
-const KEY = '2e451bcc8dfbac73fe2a37ebb97cc9c5';
-const URL = `https://api.mediastack.com/v1/news?access_key=${KEY}&limit=20?languages=en`;
+const KEY = 'iaVFBZyPE6P4G4p1lZP5dSVdWI93AqRN';
+const URL = `https://api.nytimes.com/svc/search/v2/articlesearch.json?q=election&api-key=${KEY}`;
 
 const getNews = async () => {
   const response = await fetch(URL);

@@ -6,15 +6,15 @@ export const CardNews = ({ ...props }) => {
     <Card>
       <img
         src={
-          props.image === null
+          props?.multimedia.length === 0
             ? `${process.env.PUBLIC_URL}/assets/img/noImage.png`
-            : props.image
+            : `https://nytimes.com/${props?.multimedia[0].url}`
         }
         alt={props.title}
       />
       <div>
-        <h2 className="eui-card-title mb-2 mt-2">{props.title}</h2>
-        <p>{props.description}</p>
+        <h2 className="eui-card-title mb-2 mt-2">{props.headline.main}</h2>
+        <p>{props.lead_paragraph}</p>
       </div>
     </Card>
   );
