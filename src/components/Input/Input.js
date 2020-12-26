@@ -26,7 +26,7 @@ export const Input = ({
         id={`${name}`}
         required
         name={name}
-        onBlur={() => setError(er => setError(validator(value, label)))}
+        onBlur={() => setError(validator(value, label))}
         onChange={onChange}
         value={value}
         textarea={textarea}
