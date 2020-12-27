@@ -11,18 +11,8 @@ export const NewsGrid = () => {
   const [limitPost, setLimitPost] = useState(4);
   const { data, error, loading } = useFetch(getNews);
 
-  const conditionalRender = (cardNumbers = 4) => (
-    <>
-      {loading &&
-        Array.from({ length: cardNumbers }).map((_, idx) => (
-          <Loading key={idx} />
-        ))}
-      {error && <p>error</p>}
-    </>
-  );
-
   const disableButton = () => {
-    if (limitPost === data?.response.docs.length) return true;
+    if (limitPost >= data?.response.docs.length) return true;
     return false;
   };
 
@@ -33,7 +23,7 @@ export const NewsGrid = () => {
   return (
     <>
       <CardGrid>
-        {conditionalRender()}
+        <ConditionalRender loading={loading} error={error} />
         {!loading &&
           !error &&
           data.response.docs
@@ -53,3 +43,17 @@ export const NewsGrid = () => {
     </>
   );
 };
+
+export const ConditionalRender = ({
+  cardNumbers = 4,
+  loading = true,
+  error = false
+}) => (
+  <>
+    {loading &&
+      Array.from({ length: cardNumbers }).map((_, idx) => (
+        <Loading key={idx} />
+      ))}
+    {error && <p>error</p>}
+  </>
+);
