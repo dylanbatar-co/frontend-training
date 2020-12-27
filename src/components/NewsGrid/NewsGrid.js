@@ -12,8 +12,7 @@ export const NewsGrid = () => {
   const { data, error, loading } = useFetch(getNews);
 
   const disableButton = () => {
-    if (limitPost >= data?.response.docs.length) return true;
-    return false;
+    return limitPost >= data?.response.docs.length ? false : true;
   };
 
   const loadMore = () => {
@@ -24,11 +23,12 @@ export const NewsGrid = () => {
     <>
       <CardGrid>
         <ConditionalRender loading={loading} error={error} />
-        {!loading &&
-          !error &&
-          data.response.docs
-            .slice(0, limitPost)
-            .map(item => <CardNews key={item._id} {...item} />)}
+        <RenderListCard
+          loading={loading}
+          error={error}
+          list={data?.response.docs}
+          limitPost={limitPost}
+        />
       </CardGrid>
       <div className="container-button mt-5">
         <Button
@@ -40,6 +40,23 @@ export const NewsGrid = () => {
           Load More
         </Button>
       </div>
+    </>
+  );
+};
+
+export const RenderListCard = ({
+  list = [],
+  loading = true,
+  error = true,
+  limitPost
+}) => {
+  if (loading && error) return null;
+
+  return (
+    <>
+      {list.slice(0, limitPost).map(item => (
+        <CardNews key={item._id} {...item} />
+      ))}
     </>
   );
 };
