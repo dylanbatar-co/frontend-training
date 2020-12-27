@@ -1,0 +1,89 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact form Tests Component snapshot 1`] = `
+<form
+  className="contact-form"
+  onSubmit={[Function]}
+>
+  <Card
+    className="pt-5 pb-5"
+  >
+    <Container>
+      <Row>
+        <Input
+          label="First name"
+          name="firstName"
+          onChange={[Function]}
+          validator={[Function]}
+          value=""
+        />
+        <Input
+          label="Last name"
+          name="lastName"
+          onChange={[Function]}
+          validator={[Function]}
+          value=""
+        />
+      </Row>
+      <Row>
+        <Input
+          label="Email"
+          name="email"
+          onChange={[Function]}
+          type="email"
+          validator={[Function]}
+          value=""
+        />
+        <Input
+          label="Phone number"
+          name="phone"
+          onChange={[Function]}
+          type="phone"
+          validator={[Function]}
+          value=""
+        />
+      </Row>
+      <Row>
+        <Input
+          label="Message"
+          name="message"
+          onChange={[Function]}
+          textarea={true}
+          validator={[Function]}
+          value=""
+        />
+      </Row>
+      <Checkbox
+        className="pl-0"
+        label="Send me emails about breaking news and promotions."
+      />
+      <Row
+        className="container-button mt-5"
+      >
+        <Button
+          color="info"
+          displayName="Button"
+          shape="classic"
+          size="xs"
+          type="submit"
+        >
+          Submit form
+        </Button>
+      </Row>
+    </Container>
+  </Card>
+  <Modal
+    data={
+      Object {
+        "email": "",
+        "firstName": "",
+        "lastName": "",
+        "message": "",
+        "phone": "",
+      }
+    }
+    showProp={false}
+    toggleModalProp={[Function]}
+  />
+</form>
+`;
