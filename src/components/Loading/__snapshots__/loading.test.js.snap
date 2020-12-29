@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading Component Test Loading component snapshot  1`] = `
+<div
+  aria-hidden={true}
+  className="ml-5 mr-5 mt-2 mb-2"
+>
+  <SkeletonLoader
+    height="190px"
+    highContrast={true}
+    loading={true}
+    width="320px"
+  />
+  <SkeletonLoader
+    height="40px"
+    highContrast={true}
+    loading={true}
+    width="320px"
+  />
+  <SkeletonLoader
+    height="80px"
+    highContrast={true}
+    loading={true}
+    width="320px"
+  />
+</div>
+`;

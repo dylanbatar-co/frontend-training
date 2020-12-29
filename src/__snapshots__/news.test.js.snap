@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Main app NewsApp component snapshot 1`] = `
+<Fragment>
+  <Header />
+  <main
+    className="mt-10 mb-8"
+  >
+    <Alert />
+    <News />
+    <Banner />
+    <ContactUs />
+  </main>
+</Fragment>
+`;
