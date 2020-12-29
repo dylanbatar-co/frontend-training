@@ -13,7 +13,11 @@ export const CardNews = ({ ...props }) => {
         alt={props.title}
       />
       <div>
-        <h2 className="eui-card-title mb-2 mt-2">{props.headline.main}</h2>
+        <h2 className="eui-card-title mb-2 mt-2">
+          <a href={props?.web_url} target="blank" tabIndex="8">
+            {props.headline.main}
+          </a>
+        </h2>
         <p>{props.lead_paragraph}</p>
       </div>
     </Card>

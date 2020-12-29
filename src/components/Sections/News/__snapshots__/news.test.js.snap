@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`News section Test News component snapshot 1`] = `
+<section
+  className="news-grid container"
+>
+  <h2
+    className="section-title mb-4"
+  >
+    Top news
+  </h2>
+  <NewsGrid />
+</section>
+`;

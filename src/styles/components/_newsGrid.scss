@@ -13,6 +13,9 @@
 
     h2 {
       @include text-important;
+      a {
+        color: #282e2e;
+      }
     }
 
     p {

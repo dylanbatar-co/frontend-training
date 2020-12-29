@@ -25,6 +25,9 @@
       "react-app/jest"
     ]
   },
+  "jest": {
+    "collectCoverageFrom": []
+  },
   "browserslist": {
     "production": [
       ">0.2%",

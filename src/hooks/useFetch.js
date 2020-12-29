@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 export const useFetch = func => {
   const [state, setState] = useState({
@@ -6,17 +6,26 @@ export const useFetch = func => {
     loading: true,
     error: null
   });
+  const isMount = useRef(true);
+
+  useEffect(() => {
+    return () => {
+      isMount.current = false;
+    };
+  }, []);
 
   useEffect(() => {
     setState({ data: null, loading: true, error: null });
 
     func()
       .then(data => {
-        setState({
-          loading: false,
-          error: null,
-          data
-        });
+        if (isMount.current) {
+          setState({
+            loading: false,
+            error: null,
+            data
+          });
+        }
       })
       .catch(() => {
         setState({
