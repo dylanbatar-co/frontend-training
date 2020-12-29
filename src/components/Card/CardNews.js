@@ -1,19 +1,20 @@
-import React from "react";
-import Card from "emerald-ui/lib/Card";
+import React from 'react';
+import Card from 'emerald-ui/lib/Card';
 
-export const CardNews = () => {
+export const CardNews = ({ ...props }) => {
   return (
     <Card>
-      <Card.Header>
-        <h1 className="eui-card-header-title">Default</h1>
-      </Card.Header>
+      <img
+        src={
+          props?.multimedia.length === 0
+            ? `${process.env.PUBLIC_URL}/assets/img/noImage.png`
+            : `https://nytimes.com/${props?.multimedia[0].url}`
+        }
+        alt={props.title}
+      />
       <div>
-        <h2 className="eui-card-title">Card Title</h2>
-        <p>
-          Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio.
-          Quisque volutpat mattis eros. Nullam malesuada erat ut turpis.
-          Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
-        </p>
+        <h2 className="eui-card-title mb-2 mt-2">{props.headline.main}</h2>
+        <p>{props.lead_paragraph}</p>
       </div>
     </Card>
   );

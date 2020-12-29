@@ -1,5 +1,11 @@
-import React from "react";
+import React from 'react';
+import { ContactForm } from '../../ContactForm/ContactForm';
 
 export const ContactUs = () => {
-  return <section></section>;
+  return (
+    <section className="container">
+      <h2 className="text-center section-title mb-2">Contact Us</h2>
+      <ContactForm />
+    </section>
+  );
 };

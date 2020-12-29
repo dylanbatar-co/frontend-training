@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Banner section Section snapshot 1`] = `
+<section
+  className="banner mt-5 mb-5"
+  style={
+    Object {
+      "backgroundImage": "url(/assets/img/banner.jpg)",
+    }
+  }
+>
+  <div
+    className="banner-content container"
+  >
+    <h2
+      className="mb-2"
+    >
+      Subscribe to our newsletter
+    </h2>
+    <p
+      className="mb-4"
+    >
+      Subscribe to our newsletter to receive weekly digest of the best and most ground-breaking news. Also receive a discount on your monthly subscription.
+    </p>
+    <Button
+      className="banner-button"
+      color="default"
+      displayName="Button"
+      shape="outline"
+      size="xs"
+      type="button"
+    >
+      Subscribe
+    </Button>
+  </div>
+</section>
+`;

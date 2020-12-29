@@ -1,14 +1,19 @@
-import React from "react";
-import AlertE from "emerald-ui/lib/Alert";
-import ButtonE from "emerald-ui/lib/Button";
+import React, { useState } from 'react';
+import AlertE from 'emerald-ui/lib/Alert';
 
 export const Alert = () => {
+  const [show, setShow] = useState(true);
+
   return (
-    <AlertE>
-      <div style={{ padding: "10px 0" }}>This is an info message</div>
-      <div className="btn-toolbar">
-        <ButtonE color="info">Some action</ButtonE>
-      </div>
-    </AlertE>
+    <div className="container">
+      {show && (
+        <AlertE className="alert" dismissible onDismiss={() => setShow(false)}>
+          <div className="alert-message-container">
+            Welcome to the new look of News.com. Keep scrolling to discover
+            interesting new features and news.
+          </div>
+        </AlertE>
+      )}
+    </div>
   );
 };

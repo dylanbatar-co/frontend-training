@@ -1,0 +1,31 @@
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-height: 576px;
+  height: 576px;
+  margin: 0 auto;
+  background-size: cover;
+  background-position: center;
+
+  .banner-content {
+    & > * {
+      color: #fff !important;
+    }
+
+    h2 {
+      font-size: $font-section-title;
+    }
+
+    p {
+      max-width: 400px;
+    }
+
+    .banner-button {
+      span {
+        color: #fff !important;
+        padding: 0 2rem;
+      }
+    }
+  }
+}

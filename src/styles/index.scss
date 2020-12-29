@@ -1,7 +1,48 @@
+// Variables
+@import './utils/variables';
+
+// Utilities
+@import './utils/utils';
+
+// Mixings
+@import './utils/mixings';
+
+// Components
+@import './components/alert';
+@import './components/newsGrid';
+@import './components/header';
+@import './components/banner';
+@import './components/contactForm';
+
+// GLOBALS
+
 body {
   margin: 0;
-  font-family: "Open Sans", "Segoe UI", "Roboto", "Oxygen", "Ubuntu",
-    "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif !important;
+  font-family: $font-base;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: $dark;
+}
+
+.container {
+  max-width: $max-width;
+  margin: 0 auto;
+}
+
+.container-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  button {
+    @include button-styling;
+  }
+}
+
+.text-center {
+  text-align: center;
+}
+
+.section-title {
+  font-size: $font-section-title;
 }

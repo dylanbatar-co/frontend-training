@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Navbar Tests Snapshot navbar 1`] = `
+<Navbar
+  breakAt="lg"
+  fixedAtTop={true}
+  theme="light"
+>
+  <NavbarBrand
+    displayName="NavbarBrand"
+  >
+    <a
+      href="/"
+    >
+      <img
+        alt="logo"
+        src="/assets/img/logo.svg"
+      />
+    </a>
+  </NavbarBrand>
+  <Nav
+    collapsible={true}
+    displayName="Nav"
+    grow={true}
+  >
+    <RenderDropdownList
+      listItem={
+        Array [
+          "Sport",
+          "Entertainment",
+          "Economics",
+          "Technology",
+          "Games",
+        ]
+      }
+      titleList="Section"
+    />
+    <a
+      href="#editorial"
+    >
+      Editorial
+    </a>
+    <a
+      href="#contactus"
+    >
+      Contact Us
+    </a>
+  </Nav>
+  <Nav
+    displayName="Nav"
+  >
+    <a
+      href="#avatar"
+    >
+      <Avatar
+        displayName="Avatar"
+        size="xs"
+        title="JS"
+      />
+    </a>
+  </Nav>
+</Navbar>
+`;

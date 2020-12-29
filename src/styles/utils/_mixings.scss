@@ -1,0 +1,23 @@
+// Format text
+@mixin text-styling($size, $spacing) {
+  font-size: $size;
+  letter-spacing: $spacing;
+}
+
+@mixin text-important {
+  @include text-styling($font-large, $spacing-large);
+}
+
+@mixin text-medium {
+  @include text-styling($font-medium, $spacing-medium);
+}
+
+@mixin text-normal {
+  @include text-styling($font-small, $spacing-small);
+}
+
+@mixin button-styling {
+  @include text-normal;
+  width: $button-width;
+  height: $button-height;
+}

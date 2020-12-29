@@ -1,0 +1,13 @@
+.contact-form {
+  .inputs-container {
+    display: flex;
+  }
+  .input-wrapper {
+    width: 100%;
+    @include text-normal;
+
+    input {
+      height: $input-height;
+    }
+  }
+}
