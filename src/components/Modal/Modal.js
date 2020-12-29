@@ -34,6 +34,9 @@ export const Modal = ({ toggleModalProp, showProp, data }) => {
             </div>
           </div>
           <p>{data?.message}</p>
+          <p>
+            {data?.news ? 'Enabled' : 'Dissabled'} breakings news and promotions
+          </p>
         </ModalE.Body>
         <ModalE.Footer>
           <Button onClick={toggleModal} shape="flat" color="info">

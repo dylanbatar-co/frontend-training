@@ -54,8 +54,11 @@ exports[`Contact form Tests Component snapshot 1`] = `
         />
       </Row>
       <Checkbox
+        checked={false}
         className="pl-0"
         label="Send me emails about breaking news and promotions."
+        name="news"
+        onChange={[Function]}
       />
       <Row
         className="container-button mt-5"
@@ -79,6 +82,7 @@ exports[`Contact form Tests Component snapshot 1`] = `
         "firstName": "",
         "lastName": "",
         "message": "",
+        "news": false,
         "phone": "",
       }
     }

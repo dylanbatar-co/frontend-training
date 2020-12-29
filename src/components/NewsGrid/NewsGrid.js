@@ -12,7 +12,7 @@ export const NewsGrid = () => {
   const { data, error, loading } = useFetch(getNews);
 
   const disableButton = () => {
-    return limitPost >= data?.response.docs.length ? false : true;
+    return limitPost >= data?.response.docs.length ? true : false;
   };
 
   const loadMore = () => {

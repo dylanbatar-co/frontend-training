@@ -7,9 +7,13 @@ export const useForm = inputs => {
     setValues({ ...values, [target.name]: target.value });
   };
 
+  const handlerCheckboxChange = ({ target }) => {
+    setValues({ ...values, [target.name]: target.checked });
+  };
+
   const reset = () => {
     setValues(inputs);
   };
 
-  return [values, handleInputChange, reset];
+  return [values, handleInputChange, handlerCheckboxChange, reset];
 };

@@ -20,21 +20,22 @@ import {
 
 export const ContactForm = () => {
   const [
-    { email, firstName, lastName, message, phone },
-    handleInputChange
+    { email, firstName, lastName, message, phone, news },
+    handleInputChange,
+    handleCheckbox
   ] = useForm({
     email: '',
     firstName: '',
     lastName: '',
     message: '',
-    phone: ''
+    phone: '',
+    news: false
   });
 
   const [showModal, setShowModal] = useState(false);
 
   const handlerSubmit = event => {
     event.preventDefault();
-
     setShowModal(true);
   };
 
@@ -87,7 +88,10 @@ export const ContactForm = () => {
             />
           </Row>
           <Checkbox
+            checked={news}
+            onChange={handleCheckbox}
             className="pl-0"
+            name="news"
             label="Send me emails about breaking news and promotions."
           />
           <Col className="container-button mt-5">
@@ -101,7 +105,7 @@ export const ContactForm = () => {
         <Modal
           showProp={showModal}
           toggleModalProp={setShowModal}
-          data={{ email, firstName, lastName, message, phone }}
+          data={{ email, firstName, lastName, message, phone, news }}
         />
       </>
     </form>

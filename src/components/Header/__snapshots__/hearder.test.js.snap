@@ -9,10 +9,14 @@ exports[`Navbar Tests Snapshot navbar 1`] = `
   <NavbarBrand
     displayName="NavbarBrand"
   >
-    <img
-      alt="logo"
-      src="/assets/img/logo.svg"
-    />
+    <a
+      href="/"
+    >
+      <img
+        alt="logo"
+        src="/assets/img/logo.svg"
+      />
+    </a>
   </NavbarBrand>
   <Nav
     collapsible={true}
