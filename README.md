@@ -1,6 +1,6 @@
 # Frontend Training News Apps
 
-You can see project deployment [here](https://5feb5774b165aa81bb3d17dd--newsapptraining.netlify.app/)
+You can see project deployment [here](https://5fee0538b74d85315a037278--newsapptraining.netlify.app/)
 
 ## Available Scripts
 
