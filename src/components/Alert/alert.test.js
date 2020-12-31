@@ -4,9 +4,9 @@ import { Alert } from './Alert';
 const component = shallow(<Alert />);
 
 describe('Alert Tests', () => {
-  it('Dissmisible on click botton', () => {
-    const props = component.children().props();
-    props.onDismiss();
-    expect(component.props().children).toBe(false);
+  it('It should hide the alert when clicked', () => {
+    const closeButton = jest.fn();
+    component.find('Alert').simulate('dismiss', closeButton());
+    expect(closeButton).toHaveBeenCalled();
   });
 });

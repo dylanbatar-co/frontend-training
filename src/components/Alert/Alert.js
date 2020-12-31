@@ -7,10 +7,16 @@ export const Alert = () => {
   return (
     <div className="container">
       {show && (
-        <AlertE className="alert" dismissible onDismiss={() => setShow(false)}>
+        <AlertE
+          className="alert pl-2"
+          dismissible
+          onDismiss={() => setShow(false)}
+        >
           <div className="alert-message-container">
-            Welcome to the new look of News.com. Keep scrolling to discover
-            interesting new features and news.
+            <p className="mb-0">
+              Welcome to the new look of News.com. Keep scrolling to discover
+              interesting new features and news.
+            </p>
           </div>
         </AlertE>
       )}
