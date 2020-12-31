@@ -2,8 +2,12 @@ import React from 'react';
 import Card from 'emerald-ui/lib/Card';
 
 export const CardNews = ({ ...props }) => {
+  const goToNotice = () => {
+    window.open(props?.web_url, '_blank');
+  };
+
   return (
-    <Card>
+    <Card className="pointer" onClick={goToNotice}>
       <img
         src={
           props?.multimedia.length === 0
@@ -14,7 +18,7 @@ export const CardNews = ({ ...props }) => {
       />
       <div>
         <h2 className="eui-card-title mb-2 mt-2">
-          <a href={props?.web_url} target="blank" tabIndex="8">
+          <a href={props?.web_url} target="blank" tabIndex="0">
             {props.headline.main}
           </a>
         </h2>

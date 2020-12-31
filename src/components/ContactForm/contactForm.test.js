@@ -18,7 +18,7 @@ describe('Contact form Tests', () => {
     expect(component).toMatchSnapshot();
   });
 
-  it('TextField is required', () => {
+  it('It should show the message of is required', () => {
     const props = {
       name: 'firstName',
       label: 'First Name',
@@ -33,7 +33,7 @@ describe('Contact form Tests', () => {
     );
   });
 
-  it('Email is valid (Format)', () => {
+  it('It should show the message enter valid email', () => {
     const props = {
       name: 'email',
       value: '',
@@ -48,7 +48,7 @@ describe('Contact form Tests', () => {
     expect(emailValidation('email@domain.com')).toBe(null);
   });
 
-  it('Phone is valid (Format)', () => {
+  it('It should show the message enter valid phone', () => {
     const props = {
       name: 'phone',
       value: '',
