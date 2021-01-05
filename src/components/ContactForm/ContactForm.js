@@ -33,9 +33,16 @@ export const ContactForm = () => {
   });
 
   const [showModal, setShowModal] = useState(false);
+  const [isSubmit, setIsSubmit] = useState(false);
 
   const handlerSubmit = event => {
     event.preventDefault();
+    if (
+      Object.values({ email, firstName, lastName, message, phone }).includes('')
+    ) {
+      setIsSubmit(true);
+      return;
+    }
     setShowModal(true);
   };
 
@@ -50,6 +57,7 @@ export const ContactForm = () => {
               label="First name"
               name="firstName"
               validator={fieldRequired}
+              isSubmit={isSubmit}
             />
             <Input
               value={lastName}
@@ -57,6 +65,7 @@ export const ContactForm = () => {
               label="Last name"
               name="lastName"
               validator={fieldRequired}
+              isSubmit={isSubmit}
             />
           </Row>
           <Row>
@@ -67,6 +76,7 @@ export const ContactForm = () => {
               label="Email"
               name="email"
               validator={emailValidation}
+              isSubmit={isSubmit}
             />
             <Input
               value={phone}
@@ -75,6 +85,7 @@ export const ContactForm = () => {
               name="phone"
               type="phone"
               validator={phoneValidation}
+              isSubmit={isSubmit}
             />
           </Row>
           <Row>
@@ -85,6 +96,7 @@ export const ContactForm = () => {
               label="Message"
               textarea
               validator={fieldRequired}
+              isSubmit={isSubmit}
             />
           </Row>
           <Checkbox
